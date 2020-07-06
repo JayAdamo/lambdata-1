@@ -8,7 +8,5 @@ import numpy as np
 
 TEST = pd.DataFrame(np.ones(10))
 
-x= 2
-def increment(number):
-    return number + 1
+
 

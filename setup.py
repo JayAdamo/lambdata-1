@@ -5,7 +5,7 @@ REQUIRED = [
     "numpy",
     "pandas",
     "sklearn",
-    "matplotlib.pyplot",
+    "matplotlib",
     "category_encoders"
 ]
 

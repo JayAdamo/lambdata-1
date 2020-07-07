@@ -9,6 +9,7 @@ verify_ssl = true
 pandas = "*"
 numpy = "*"
 twine = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.8"

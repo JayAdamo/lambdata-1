@@ -3,13 +3,17 @@
 import setuptools
 REQUIRED = [
     "numpy",
-    "pandas"
+    "pandas",
+    "sklearn",
+    "matplotlib.pyplot",
+    "category_encoders"
 ]
+
 with open("README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 setuptools.setup(
     name="lambdata_robdbennett",
-    version="0.0.1",
+    version="0.0.3",
     author="RobDBennett",
     description="A collection of Data Science helper functions",
     long_description=LONG_DESCRIPTION,

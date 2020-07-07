@@ -9,4 +9,6 @@
 ### Review
 __example_module__.py: A great variety of class functions and library imports. Code is very tidy and flows well. The only issue I would think is that there is too much going on in one file but if you got it to load, terrific!
 
+__init__.py: Clear spacing, a ton of libraries which will be great for future changes/additions to the code. 
+
 

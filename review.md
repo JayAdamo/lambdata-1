@@ -7,4 +7,6 @@
 - Could you build with (import and use) or extend on it (as a developer adding more to the codebase)?
 
 ### Review
+__example_module__.py: A great variety of class functions and library imports. Code is very tidy and flows well. The only issue I would think is that there is too much going on in one file but if you got it to load, terrific!
+
 

@@ -10,7 +10,6 @@ from sklearn.metrics import plot_confusion_matrix
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
-import matplotlib.pyplot as plt
 from sklearn.pipeline import make_pipeline
 import category_encoders as ce
 

@@ -6,6 +6,7 @@ from sklearn.metrics import plot_confusion_matrix
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
+import matplotlib
 
 
 x=2

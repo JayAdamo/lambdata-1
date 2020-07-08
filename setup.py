@@ -1,26 +1,29 @@
-""" lambdata - a collection of Data Science helper functions
+""" 
+lambdata - a collection of Data Science helper functions
 """
 import setuptools
 REQUIRED = [
     "numpy",
     "pandas",
-    "sklearn",
-    "matplotlib",
-    "category_encoders"
+    "scikit-learn",
+    "scipy",
+    "joblib",
+    "category_encoders",
+    "threadpoolctl",
 ]
 
 with open("README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 setuptools.setup(
     name="lambdata_robdbennett",
-    version="0.0.8",
+    version="0.3.10",
     author="RobDBennett",
     description="A collection of Data Science helper functions",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/RobDBennett/lambdata",
     packages=setuptools.find_packages(),
-    python_requires=">=3.5",
+    python_requires=">=3.6",
     install_requires=REQUIRED,
     classifiers=[
         "Programming Language :: Python :: 3",

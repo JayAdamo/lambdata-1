@@ -79,8 +79,9 @@ class Parlor(Larper):
     
 class Immersion(Larper):
     games_played = 'outdoor'
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int, hobby: str= None):
         super().__init__(name, age)
+        self.hobby = hobby
 
     def speak(self) -> str:
         phrase = f'My name is {self.name}, I am {self.age} years old, and my character is soooo cool.'

@@ -6,7 +6,8 @@ from sklearn.metrics import plot_confusion_matrix
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
-import matplotlib
+from sklearn.impute import SimpleImputer
+import category_encoders as ce
 
 
 x=2
@@ -37,7 +38,7 @@ def split_it(dataframe):
    train, val = train_test_split(base, test_size=.2)
    return train, val, test
 
-def pipe_it(train, val):
+def pipe_it(train, val, features, target):
     pipe = make_pipeline(ce.OrdinalEncoder(),
                         SimpleImputer(),
                         StandardScaler(),
@@ -46,9 +47,13 @@ def pipe_it(train, val):
     X_val = val[features]
     y_train = train[target]
     y_val = val[target]
-    pipeline.fit(X_train, y_train)
-    return pipe, X_val, y_val, print("Validation Accuracy:", pipeline.score(X_val, y_val))
+    pipe.fit(X_train, y_train)
+    return pipe, X_val, y_val
 
-def confuse_me(train, val):
-    pipe, X_val, y_val = pipe_it(train, val)
+def make_df(csv):
+    df = pd.read_csv(csv)
+    return df
+
+def confuse_me(train, val, features, target):
+    pipe, X_val, y_val = pipe_it(train, val, features, target)
     return plot_confusion_matrix(pipe, X_val, y_val, values_format='.0f', xticks_rotation='vertical');

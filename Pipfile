@@ -10,6 +10,11 @@ pandas = "*"
 numpy = "*"
 twine = "*"
 matplotlib = "*"
+scipy = "*"
+joblib = "*"
+category-encoders = "*"
+scikit-learn = "*"
+threadpoolctl = "*"
 
 [requires]
 python_version = "3.8"

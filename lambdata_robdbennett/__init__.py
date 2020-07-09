@@ -16,6 +16,7 @@ import category_encoders as ce
 from lambdata_robdbennett import __example_module__
 from lambdata_robdbennett import classes
 from lambdata_robdbennett import test
+from lambdata_robdbennett import lambdata_test
 
 
 TEST = pd.DataFrame(np.ones(10))

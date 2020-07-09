@@ -1,9 +1,10 @@
 
 class Gamer:
     """A test class for gamers. 
+    Parameters-
     :var name: str
     :var age: int
-    var position: 0
+    :var position: 0
     """
 
     # Class Variables
@@ -33,16 +34,28 @@ class Gamer:
         print(f'{self.name} moved from {old} to {self.position}')
 
 class Larper(Gamer):
+    """A test class(Larper) that inherits from Gamer.
+    Adds a speak command.
+    """
+    # Class variables.
     hair = True
     beard = True
+
     def __init__(self, name, age):
         super().__init__(name, age)
+
     def speak(self) -> str:
         return 'LIGHTNING BOLT! LIGHTNING BOLT! LIGHTNING BOLT!'
 
 class Tabletop(Gamer):
+    """A test class(Tabletop) that inherits from Gamer.
+    Adds a speak command.
+    """
+
+    # Class variables.
     hair = True
     snobbery = True
+    
     def __init__(self, name, age):
         super().__init__(name, age)
 
@@ -50,7 +63,13 @@ class Tabletop(Gamer):
         return 'On page 138 you will clearly see that you are wrong and terrible.'
 
 class VideoGame(Gamer):
+    """A test class(Videogame) that inherits from Gamer.
+    Adds a speak command.
+    """
+
+    # Class variables.
     beard = True
+
     def __init__(self, name, age):
         super().__init__(name, age)
 
@@ -58,7 +77,13 @@ class VideoGame(Gamer):
         return f'{self.name} asks for a Monster energy.'
 
 class Parlor(Larper):
+    """A test class(Parlor) that inherits from Larper.
+    Adds a hobby and phrase attribute.
+    """
+
+    # Class variables.
     games_played = 'indoor'
+
     def __init__(self, name: str, age: int, hobby: str = None):
         super().__init__(name, age)
         self.hobby = hobby
@@ -78,7 +103,12 @@ class Parlor(Larper):
             return f'I do not have a hobby.'
     
 class Immersion(Larper):
+    """A test class(Immersion) that inherits from Larper.
+    Adds a phrase and hobby command.
+    """
+    # Class variables.
     games_played = 'outdoor'
+    
     def __init__(self, name: str, age: int, hobby: str= None):
         super().__init__(name, age)
         self.hobby = hobby
